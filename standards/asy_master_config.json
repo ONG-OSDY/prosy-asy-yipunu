@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "project_name": "PROJET PROSY",
+    "standard_name": "Alphabet Standardisé du Yipunu (ASY)",
+    "author": "Brice Alain MAMBINGA MBIBA",
+    "institution": "Organisation pour la Sauvegarde et le Développement du Yipunu (ONG OSDY)",
+    "language": {
+      "name": "Yipunu",
+      "iso_639_3": "puu",
+      "family": "Bantu"
+    },
+    "version": "1.0.0",
+    "date": "2026-11-07"
+  },
+  "linguistic_rules": {
+    "case_sensitive": true,
+    "integrity_rule": "Les consonnes combinées (digrammes et prénasales) et les voyelles longues constituent des unités graphémiques indivisibles. Interdiction stricte de fragmentation en tokenisation, syllabation et expressions régulières.",
+    "regex_priority_pattern": "(mb|mf|mp|mv|nd|ng|nk|nt|ny|nz|ts|Mb|Mf|Mp|Mv|Nd|Ng|Nk|Nt|Ny|Nz|Ts|aa|ee|ii|oo|uu|[bdfgjlmnprstvwyaeiou])"
+  },
+  "alphabet": {
+    "vowels": {
+      "short": [
+        {"grapheme": "a", "api": "[a]", "description": "Voyelle ouverte antérieure non arrondie"},
+        {"grapheme": "e", "api": "[e], [ɛ], [ə]", "description": "Voyelle antérieure (fermé, ouvert, schwa)"},
+        {"grapheme": "i", "api": "[i]", "description": "Voyelle fermée antérieure non arrondie"},
+        {"grapheme": "o", "api": "[o], [ɔ]", "description": "Voyelle postérieure arrondie (fermé, ouvert)"},
+        {"grapheme": "u", "api": "[u]", "description": "Voyelle fermée postérieure arrondie"}
+      ],
+      "long": [
+        {"grapheme": "aa", "api": "[a:]", "description": "Voyelle longue ouverte antérieure non arrondie"},
+        {"grapheme": "ee", "api": "[e:]", "description": "Voyelle longue antérieure"},
+        {"grapheme": "ii", "api": "[i:]", "description": "Voyelle longue fermée antérieure non arrondie"},
+        {"grapheme": "oo", "api": "[o:]", "description": "Voyelle longue postérieure arrondie"},
+        {"grapheme": "uu", "api": "[u:]", "description": "Voyelle longue fermée postérieure arrondie"}
+      ]
+    },
+    "consonants": {
+      "monographs": [
+        {"grapheme": "b", "api": "/b/", "description": "Occlusive bilabiale sonore"},
+        {"grapheme": "d", "api": "/d/", "description": "Occlusive alvéolaire sonore"},
+        {"grapheme": "f", "api": "/f/", "description": "Fricative labiodentale sourde"},
+        {"grapheme": "g", "api": "/ɣ/", "description": "Fricative vélaire stricte"},
+        {"grapheme": "j", "api": "/d͡ʒ/", "description": "Affriquée sonore"},
+        {"grapheme": "k", "api": "/k/", "description": "Occlusive vélaire sourde"},
+        {"grapheme": "l", "api": "/l/", "description": "Latérale"},
+        {"grapheme": "m", "api": "/m/", "description": "Nasale bilabiale"},
+        {"grapheme": "n", "api": "/n/", "description": "Nasale alvéolaire"},
+        {"grapheme": "p", "api": "/p/", "description": "Occlusive bilabiale sourde"},
+        {"grapheme": "r", "api": "/r/", "description": "Rhétique (réservée aux emprunts)"},
+        {"grapheme": "s", "api": "/s/", "description": "Fricative sourde"},
+        {"grapheme": "t", "api": "/t/", "description": "Occlusive alvéolaire sourde"},
+        {"grapheme": "v", "api": "/β/", "description": "Fricative bilabiale sonore (standard PROSY)"},
+        {"grapheme": "w", "api": "/w/", "description": "Approximante labio-vélaire"},
+        {"grapheme": "y", "api": "/j/", "description": "Approximante palatale"}
+      ],
+      "combined_units": {
+        "digraphs": [
+          {"grapheme": "ts", "api": "/ts/", "example": "tsugu", "translation": "prison", "syllabation": "tsu-gu"},
+          {"grapheme": "ny", "api": "/ɲ/", "example": "nyambi", "translation": "divinité", "syllabation": "nya-mbi"}
+        ],
+        "prenasals": [
+          {"grapheme": "mb", "api": "/mb/", "example": "mbembu", "translation": "parole", "syllabation": "mbe-mbu"},
+          {"grapheme": "mp", "api": "/mp/", "example": "empeyi", "translation": "il me donne", "syllabation": "e-mpe-yi"},
+          {"grapheme": "mf", "api": "/mf/", "example": "mfumbi", "translation": "cadavre", "syllabation": "mfu-mbi"},
+          {"grapheme": "mv", "api": "/mv/", "example": "mvule", "translation": "pluie", "syllabation": "mvu-le"},
+          {"grapheme": "nd", "api": "/nd/", "example": "ndagu", "translation": "maison", "syllabation": "nda-gu"},
+          {"grapheme": "nt", "api": "/nt/", "example": "nzintu", "translation": "dernier", "syllabation": "nzi-tu"},
+          {"grapheme": "ng", "api": "/ng/", "example": "ngenze", "translation": "vraie", "syllabation": "nge-nze"},
+          {"grapheme": "nk", "api": "/nk/", "example": "nkumfu", "translation": "désordre / confusion", "syllabation": "nku-mfu"},
+          {"grapheme": "nz", "api": "/nz/", "example": "Nzambi", "translation": "Dieu", "syllabation": "nza-mbi"}
+        ]
+      }
+    }
+  }
+}
