@@ -27,9 +27,69 @@ Le yipunu (ou punu) est l'une des langues bantu les plus parlées au Gabon, prin
 * **[OBJ-12] Agent Conversationnel (Chatbot IA Yipunu) :** Configurer et déployer un assistant IA et un module de traduction automatique basés sur les règles strictes de l'ASY pour interagir en langage naturel.
 * **[OBJ-13] Application Mobile Applicative :** Concevoir une application smartphone interactive regroupant les cours, les dictionnaires et les outils d'apprentissage nomades pour les jeunes générations.
 
+---
+
+### 3. Structure Graphémique et Phonétique (ASY)
+
+L'ASY s'appuie sur le système phonologique de la langue et le traduit en un ensemble de règles graphémiques strictes.
+
+#### A. Le Système Vocalique
+Le système vocalique repose sur 5 voyelles fondamentales. Les variantes d'ouverture et le schwa `[ə]` sont pris en compte graphiquement par les lettres de base, sans ajout de caractères spéciaux superflus.
+
+| Graphe ASY | Valeurs Phonétiques (API) | Description & Remarques |
+| :--- | :--- | :--- |
+| **a** / **aa** | [a] / [a:] | Voyelle ouverte antérieure non arrondie. Le redoublement marque la voyelle longue. |
+| **e** / **ee** | [e], [ɛ], [ə] / [e:] | Voyelle antérieure ; inclut les réalisations fermée, ouverte et le **schwa `[ə]`** selon le contexte. |
+| **i** / **ii** | [i] / [i:] | Voyelle fermée antérieure non arrondie. Le redoublement marque la voyelle longue. |
+| **o** / **oo** | [o], [ɔ] / [o:] | Voyelle postérieure arrondie ; inclut les réalisations fermée et ouverte. |
+| **u** / **uu** | [u] / [u:] | Voyelle fermée postérieure arrondie. Le redoublement marque la voyelle longue. |
+
+* **Règle de Quantité Vocalique :** Le redoublement de la voyelle (**aa, ee, ii, oo, uu**) est obligatoire pour marquer graphiquement les voyelles longues, ce qui permet de distinguer les paires minimales à l'écrit.
+  
+#### B. Les Graphèmes Consonantiques (27 unités atomiques)
+**RÈGLE D’INTÉGRITÉ ABSOLUE (PROSY) :** Les graphèmes simples et complexes ci-dessous constituent les unités consonantiques indivisibles du yipunu. Les digraphes complexes se comportent rigoureusement comme des consonnes uniques. Ils sont strictement indissociables en syllabation, en segmentation informatique (tokenisation) et en analyse morphologique.
+
+| Graphe ASY | Valeur Phonétique (API) | Nature & Spécificités PROSY |
+| :--- | :--- | :--- |
+| **B** | /b/ | Occlusive bilabiale sonore. |
+| **D** | /d/ | Occlusive alvéolaire sonore. |
+| **F** | /f/ | Fricative labiodentale sourde. |
+| **G** | /ɣ/ | Fricative vélaire stricte (le phonème [ɡ] dur n'existe pas de manière autonome). |
+| **J** | /d͡ʒ/ | Affriquée sonore (la fricative [ʒ] n'existe pas). |
+| **K** | /k/ | Occlusive vélaire sourde. |
+| **L** | /l/ | Latérale. |
+| **M** | /m/ | Nasale bilabiale. Elle sert également de base morphologique aux prénasales bilabiales et labiodentales. |
+| **MB** | /ᵐb/ | Séquence pré-nasalisée indissociable. |
+| **MF** | /ᶬf/ | Séquence nasale fricative sourde. |
+| **MP** | /ᵐp/ | Séquence pré-nasalisée indissociable. |
+| **MV** | /ᶬv/ | Séquence nasale fricative sonore . |
+| **N** | /n/ | Nasale alvéolaire. |
+| **ND** | /ⁿd/ | Séquence pré-nasalisée indissociable. |
+| **NG** | /ᵑɡ/ | Séquence pré-nasalisée indissociable. |
+| **NK** | /ᵑk/ | Séquence pré-nasalisée indissociable. |
+| **NT** | /ⁿt/ | Séquence pré-nasalisée indissociable. |
+| **NY** | /ɲ/ | Nasale palatale indissociable. |
+| **NZ** | /ⁿz/ | Séquence pré-nasalisée indissociable (seule occurrence du caractère z). |
+| **P** | /p/ | Occlusive bilabiale sourde. |
+| **R** | /r/ | Rhétique (réservée aux emprunts). |
+| **S** | /s/ | Fricative sourde. |
+| **T** | /t/ | Occlusive alvéolaire sourde. |
+| **TS** | /t͡s/ | Affriquée sourde indissociable. |
+| **V** | /β/ | Fricative bilabiale sonore (choix standardisé du PROSY). |
+| **W** | /w/ | Approximante labio-vélaire. |
+| **Y** | /j/ | Approximante palatale. |
+
+#### C. Principes Directeurs d'Univocité Graphique
+1. **Élimination des ambiguïtés :** Le son `[ɣ]` s'écrit exclusivement **g** (le digraphe *gh* historique est formellement proscrit). Le son `[d͡ʒ]` s'écrit exclusivement **j**.
+2. **Standardisation du V :** Le caractère **v** est officiellement choisi pour représenter de manière stable le phonème fricatif bilabial sonore `/β/`.
+3. **Intégrité des digraphes :** Tout algorithme de traitement automatique des langues (TAL) appliqué au yipunu doit configurer ses expressions régulières (Regex) et ses tokeniseurs pour traiter les 11 digraphes et prénasales comme des caractères uniques insécables.
+
+---
+### 4. Fichiers Techniques du Projet
+Les configurations strictes pour les outils informatiques et l'Intelligence Artificielle sont stockées dans cet atelier :
+* **Configuration Maîtresse :** La loi informatique de l'alphabet (format machine) est disponible ici : `standards/asy_master_config.json`.
+* **Outil d'Automatisation :** Le script de segmentation et de génération automatique du tokeniseur IA est disponible ici : `tools/generate_tokenizer.py`.
 
 ---
 
-### 3. Fichiers Techniques du Projet
-Les configurations strictes pour les outils informatiques et l'Intelligence Artificielle sont stockées dans cet atelier :
-* La loi informatique de l'alphabet (format machine) est disponible ici : `standards/asy_master_config.json`.
+
